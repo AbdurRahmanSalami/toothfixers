@@ -1,0 +1,126 @@
+/* CSS Variables */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+}
+
+/* Default styles */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f4fc; /* lighter shade of #0A61EB */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0A61EB; /* your primary color */
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #094aa4; /* darker shade of #0A61EB */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust scrollbar width for smaller screens */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+
+/* Typography */
+body {
+  @apply text-base font-normal;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-medium;
+}
+
+h3 {
+  @apply text-xl font-medium;
+}
+
+p {
+  @apply text-base font-normal;
+}
+
+/* Captions */
+span.caption {
+  @apply text-xs font-normal;
+}
+
+.custom-shadow {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* global-styles.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+button, a {
+  @apply cursor-pointer transition-all duration-200;
+
+  /* Focus styles */
+  
+}
+
+button:focus, a:focus {
+  @apply outline-none; 
+}
+
+
+/* Apply specific anchor styles */
+a {
+  padding: unset;
+  margin: unset;
+  text-decoration: none;
+}
+
+.tiptap ul p,
+.tiptap ol p {
+  @apply inline;
+}
+ 
+.tiptap p.is-editor-empty:first-child::before {
+  @apply pointer-events-none float-left h-0 text-sm;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
